@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Выбор несгораемой суммы</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="screen visible">
+    <h1>Выберите несгораемую сумму</h1>
+    <form method="post">
+        <label for="nesgoraemaya_summa">Несгораемая сумма:</label>
+        <select id="nesgoraemaya_summa" name="nesgoraemaya_summa">
+            <option value="3000000">3 000 000</option>
+            <option value="1500000">1 500 000</option>
+            <option value="800000">800 000</option>
+            <option value="400000">400 000</option>
+            <option value="200000">200 000</option>
+            <option value="100000">100 000</option>
+            <option value="50000">50 000</option>
+            <option value="25000">25 000</option>
+            <option value="15000">15 000</option>
+            <option value="10000">10 000</option>
+            <option value="5000">5 000</option>
+            <option value="3000">3 000</option>
+            <option value="2000">2 000</option>
+            <option value="1000">1 000</option>
+            <option value="500">500</option>
+        </select>
+        <button type="submit">Выбрать</button>
+    </form>
+    </div>
+</body>
+</html>

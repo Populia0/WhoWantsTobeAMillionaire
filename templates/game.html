@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кто хочет стать миллионером?</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="screen visible">
+        <form method="post">
+            <div class="btn-group">
+                <button name="btn" value="50 на 50" {{ 'disabled' if used_help50 else '' }}>50 на 50</button>
+                <button name="btn" value="Право на ошибку" {{ 'disabled' if used_help_mist else '' }}>Право на ошибку</button>
+                <button name="btn" value="Замена вопроса" {{ 'disabled' if used_help_change else '' }}>Замена вопроса</button>
+            </div>
+            <img width="300" src="./static/maxresdefault.jpg" alt="Игроки" />
+            <h1>{{question}}</h1>
+            {% for answer in answers_list %}
+                <input type="radio" name="ans_text" value="{{ answer }}">{{ answer }}
+            {% endfor %}
+                <p><input class="btn-group" type="submit" id="submit-button" value="Ответить"></p>
+        </form>
+        <h2>{{sqore}}</h2>
+    </div>
+</body>
+</html>
